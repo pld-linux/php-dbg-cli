@@ -1,5 +1,5 @@
 Summary:	dbg-cli - a free front-end for dbg PHP debbuger
-Summary(pl.UTF-8):   dbg-cli - wolnodostępny frontend dla debuggera PHP dbg
+Summary(pl.UTF-8):	dbg-cli - wolnodostępny frontend dla debuggera PHP dbg
 Name:		php-dbg-cli
 Version:	2.13.1
 Release:	0.1
