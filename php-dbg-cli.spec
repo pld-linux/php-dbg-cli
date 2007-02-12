@@ -1,5 +1,5 @@
 Summary:	dbg-cli - a free front-end for dbg PHP debbuger
-Summary(pl):	dbg-cli - wolnodostêpny frontend dla debuggera PHP dbg
+Summary(pl.UTF-8):   dbg-cli - wolnodostÄ™pny frontend dla debuggera PHP dbg
 Name:		php-dbg-cli
 Version:	2.13.1
 Release:	0.1
@@ -27,13 +27,13 @@ an IDE or console.
 
 This package contains DBG CLI - a free front-end for dbg.
 
-%description -l pl
-DBG to w pe³ni funkcjonalny debugger dla PHP - interaktywne narzêdzie
-pomagaj±ce przy diagnostyce skryptów w PHP. Dzia³a zarówno na
-produkcyjnym jak i rozwojowym serwerze WWW, pozwala na ¶ledzenie
-skryptów lokalnie jak i zdalnie, z poziomu IDE lub konsoli.
+%description -l pl.UTF-8
+DBG to w peÅ‚ni funkcjonalny debugger dla PHP - interaktywne narzÄ™dzie
+pomagajÄ…ce przy diagnostyce skryptÃ³w w PHP. DziaÅ‚a zarÃ³wno na
+produkcyjnym jak i rozwojowym serwerze WWW, pozwala na Å›ledzenie
+skryptÃ³w lokalnie jak i zdalnie, z poziomu IDE lub konsoli.
 
-Ten pakiet zawiera DBG CLI - wolnodostêpny frontend dla dbg.
+Ten pakiet zawiera DBG CLI - wolnodostÄ™pny frontend dla dbg.
 
 %prep
 %setup -q -n dbg-cli-%{version}-src
