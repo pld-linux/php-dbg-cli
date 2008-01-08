@@ -1,13 +1,22 @@
+#
+# TODO:
+#		command.cpp:761: warning: overflow in implicit constant conversion
+#		command.cpp:768: warning: overflow in implicit constant conversion
+#		signed overflow is an undefined bahaviour and gcc optimizer
+#		can produce random code ;)
+#
+#		-Wl,--as-needed breaks ./configure.
+#
 Summary:	dbg-cli - a free front-end for dbg PHP debbuger
 Summary(pl.UTF-8):	dbg-cli - wolnodostępny frontend dla debuggera PHP dbg
 Name:		php-dbg-cli
-Version:	2.13.1
+Version:	2.15.5
 Release:	0.1
 License:	The DBG License Version 3.0
 Group:		Development/Languages/PHP
 Source0:	http://dl.sourceforge.net/dbg2/dbg-cli-%{version}-src.tar.gz
-# Source0-md5:	3cb0a8bc2a03a0815ed24b2da602e72f
-Patch0:		%{name}-pcre.patch
+# Source0-md5:	10524eaf90dd177c709deb981419fcf4
+Patch0:		%{name}-syslibs.patch
 URL:		http://dd.cron.ru/dbg/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -18,6 +27,9 @@ BuildRequires:	pcre-devel
 BuildRequires:	readline-devel
 Obsoletes:	dbg-cli
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+# see TODO
+%define		filterout_ld -Wl,--as-needed
 
 %description
 DBG is a a full-featured PHP debugger, an interactive tool that helps
@@ -38,7 +50,7 @@ Ten pakiet zawiera DBG CLI - wolnodostępny frontend dla dbg.
 %prep
 %setup -q -n dbg-cli-%{version}-src
 %patch0 -p1
-rm -rf pcre
+rm -rf pcre getopt
 
 %build
 %{__libtoolize}
