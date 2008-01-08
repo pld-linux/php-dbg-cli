@@ -1,0 +1,36 @@
+--- dbg-cli-2.15.5-src/configure.in.orig	2007-05-01 20:34:26.000000000 +0200
++++ dbg-cli-2.15.5-src/configure.in	2008-01-08 21:47:13.000000000 +0100
+@@ -193,12 +193,6 @@
+   ]))
+ 
+ 
+-if ! test "$ac_cv_getopt_long" = "yes"; then
+-    U_INCLUDES="$U_INCLUDES -I\$(top_builddir)/getopt"
+-    U_SUBDIRS="$U_SUBDIRS getopt"
+-    U_LIBS="$U_LIBS -L\$(top_builddir)/getopt -lgetopt_1"
+-fi
+-
+ AC_CACHE_CHECK(for pcreok,ac_cv_pcreok, AC_TRY_COMPILE([
+     #include <stdlib.h>
+     #ifdef HAVE_GNUREGEX_H
+@@ -221,11 +215,6 @@
+   ]))
+ 
+ 
+-if ! test "$ac_cv_pcreok" = "yes"; then
+-    U_INCLUDES="$U_INCLUDES -I\$(top_builddir)/pcre"
+-    U_SUBDIRS="$U_SUBDIRS pcre"
+-    U_LIBS="$U_LIBS -L\$(top_builddir)/pcre -lpcre_1"
+-fi
+ 
+ 
+ AC_PROG_INSTALL
+@@ -276,8 +265,6 @@
+ AC_OUTPUT(Makefile \
+     dbg/Makefile \
+     dbgbase/Makefile \
+-    pcre/Makefile \
+-    getopt/Makefile \
+ )
+ 
+ echo \
