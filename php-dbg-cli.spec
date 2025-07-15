@@ -49,7 +49,7 @@ Ten pakiet zawiera DBG CLI - wolnodostępny frontend dla dbg.
 
 %prep
 %setup -q -n dbg-cli-%{version}-src
-%patch0 -p1
+%patch -P0 -p1
 rm -rf pcre getopt
 
 %build
